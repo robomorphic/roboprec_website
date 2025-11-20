@@ -1,31 +1,47 @@
 site_name: RoboPrec
-site_url: https://mydomain.org/
+site_url: https://roboprec.org/
+
 nav:
-  - Home: welcome.md
+  - Home: index.md
   - Getting Started: getting_started.md
+  - Framework Overview: framework.md
+  - Benchmarks: benchmarks.md
+  - Publications: publications.md
+  - Community & Contact: community.md
+
 theme:
   name: material
   features:
     - navigation.sections
+    - navigation.tabs
     - toc.integrate
     - toc.follow
+    - content.code.copy
   palette:
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
 markdown_extensions:
   - toc:
       permalink: true
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
